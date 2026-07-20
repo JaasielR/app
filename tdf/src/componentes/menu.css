@@ -1,0 +1,76 @@
+.p-megamenu {
+ background: transparent;
+ border: none;
+ box-shadow: none;
+ padding: 0;
+ width: auto;
+ right: 80%;
+
+}
+
+.p-megamenu-root-list {
+ gap: .5rem;
+}
+
+.p-megamenu .p-menuitem-link {
+ display: flex;
+ align-items: center;
+ gap: .5rem;
+ padding: .8rem 1.2rem;
+ color: #f0f0f1;
+ background: transparent;
+ border-radius: .6rem;
+ transition: all .25s ease;
+}
+
+.p-megamenu .p-menuitem-link:hover {
+ background: rgb(232 215 215 / 0.71);
+ color: rgb(96 165 250 / 0);
+}
+
+.p-megamenu .p-menuitem-icon {
+ color: #60a5fa;
+}
+
+.p-megamenu .p-submenu-icon {
+ color: #9ca3af;
+}
+
+.p-megamenu-panel {
+ margin-top: .75rem;
+ background: #1f2937;
+ border: 1px solid #374151;
+ border-radius: 12px;
+ box-shadow: 0 12px 30px rgba(0,0,0,.35);
+ padding: 1rem;
+}
+
+.p-megamenu-panel .p-menuitem-text {
+ color: #eae5e5;
+}
+
+.p-megamenu-panel .p-menuitem-link {
+ border-radius: .5rem;
+ padding: .6rem .8rem;
+}
+
+.p-megamenu-panel .p-menuitem-link:hover {
+ background: #374151;
+ color: #60a5fa;
+}
+
+.p-megamenu-grid {
+ gap: 2rem;
+}
+
+@media (max-width: 980px) {
+
+ .p-megamenu {
+  width: 100%;
+ }
+
+ .p-megamenu-panel {
+  border-radius: 0;
+ }
+
+}

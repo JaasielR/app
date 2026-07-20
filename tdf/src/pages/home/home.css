@@ -1,0 +1,42 @@
+.grid-caja{
+
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: [x0] 310px [x1] 310px [x2] 310px [x3] 310px [x4] 310px [x5] ;
+    grid-template-rows: [y0] 70px [y1] 400px [y2] 400px [y3];
+    row-gap: 30px;
+    column-gap: 10px;
+    text-align:center
+
+}
+
+.grid-caja>div{
+
+    background:aliceblue;
+
+}
+
+aside {
+    background: transparent;
+    grid-column: x0 / x3;
+    grid-row: y1 / y3;
+    color: #bd3636;
+    justify-self: center;
+    align-self: center;
+}
+
+section {
+    background: transparent;
+    grid-column: x3 / x6;
+    grid-row: y1 / y3;
+    justify-self: center;
+    align-self: center;
+}
+
+.fijo {
+    position: fixed;
+    top: 0;
+    right: 0;
+    zIndex: '1000';
+}
+

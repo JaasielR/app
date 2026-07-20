@@ -1,0 +1,27 @@
+body { font: 30 .7em/1 "Neuton"; ; text-align: center; margin: 0 }
+
+.title {
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    display: inline-block;
+    padding: 1.1em 0em;
+    position: absolute;
+    top: 13%;
+    left: 4%;
+    width: 80em;
+    margin: 0 0 0 -20em;
+    background: linear-gradient(to right, #d5ae12, #f6700f, #e8ce26);
+    background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    span {
+        font: 900 4em/1 "Oswald", sans-serif;
+        letter-spacing: 0;
+        padding: .25em 0 .325em;
+        display: block;
+        margin: 0 auto;
+        text-shadow: 0 0 100px rgba(255,255,255,1);
+
+    }
+}

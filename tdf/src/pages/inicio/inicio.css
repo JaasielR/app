@@ -1,0 +1,64 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    min-height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)), url("@/assets/z3.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+}
+
+.hero{
+    flex: 1;
+    display:flex;
+    flex-direction:column;
+    min-height: 100vh;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:2rem;
+}
+
+.hero h1{
+    font-size:5rem;
+    margin-bottom:2rem;
+    font-weight: 700;
+}
+
+.hero p{
+    max-width:700px;
+    font-size:1.3rem;
+    margin-bottom:2rem;
+}
+
+.grid-caj{
+
+    display: grid;
+    grid-template-rows: 72px;
+    text-align:center
+
+}
+
+.grid-caj>div{
+
+    background:aliceblue;
+
+}
+
+header {
+    background-color: #A5BE3280;
+}
+
+.menu-fijo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: 1000;
+}

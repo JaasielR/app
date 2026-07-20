@@ -1,0 +1,274 @@
+.akatsuki-card{
+
+    position:relative;
+    width:340px;
+    height:560px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:18px;
+    overflow:hidden;
+    border-radius:18px;
+    color:white;
+
+    background:
+            linear-gradient(
+                    145deg,
+                    #0b0b0b,
+                    #1b1b1b
+            );
+
+    border:1px solid rgba(170,0,0,.35);
+    box-shadow:
+            0 10px 25px rgba(0,0,0,.55);
+
+    transition:
+            transform .35s ease,
+            box-shadow .35s ease,
+            border-color .35s ease;
+
+}
+
+.akatsuki-card::before{
+
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+            radial-gradient(
+                    circle at top,
+                    rgba(180,0,0,.20),
+                    transparent 60%
+            );
+
+    opacity:.8;
+    pointer-events:none;
+
+}
+
+.akatsuki-card:hover{
+
+    transform:
+            translateY(-10px)
+            scale(1.03);
+
+    border-color:#d32f2f;
+    box-shadow:
+            0 0 20px rgba(211,47,47,.35),
+            0 20px 40px rgba(0,0,0,.7);
+
+}
+
+.akatsuki-header{
+
+    width:100%;
+    padding:10px;
+    border-radius:10px;
+    text-align:center;
+    font-size:14px;
+    letter-spacing:3px;
+    font-weight:700;
+    color:white;
+
+    background:
+            linear-gradient(
+                    90deg,
+                    #650000,
+                    #b71c1c,
+                    #650000
+            );
+
+    box-shadow:
+            0 0 12px rgba(183,28,28,.35);
+
+}
+
+.akatsuki-image-container{
+
+    width:250px;
+    height:280px;
+    margin-top:18px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.akatsuki-image-container img{
+
+    max-width:100%;
+    max-height:100%;
+    object-fit:contain;
+    transition:transform .35s ease;
+
+}
+
+
+.akatsuki-card:hover img{
+
+    transform:scale(1.06);
+
+}
+
+.akatsuki-name{
+
+    margin-top:15px;
+    color:#d32f2f;
+    font-size:28px;
+    font-weight:700;
+    text-align:center;
+
+    text-shadow:
+            0 0 12px rgba(211,47,47,.45);
+
+}
+
+.akatsuki-tags{
+
+    margin-top:15px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:8px;
+    min-height:70px;
+
+}
+
+
+.akatsuki-tag{
+
+    background:#7f0000 !important;
+    border:none !important;
+    color:white !important;
+    font-size:.75rem;
+
+}
+
+.akatsuki-data{
+
+    width:100%;
+    margin-top:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+
+}
+
+.akatsuki-data div{
+
+    background:#111;
+    border:1px solid rgba(180,0,0,.25);
+    border-radius:10px;
+    padding:12px;
+    text-align:center;
+    transition:.3s;
+
+}
+
+.akatsuki-card:hover .akatsuki-data div{
+
+    border-color:#b71c1c;
+
+}
+
+.akatsuki-data span{
+
+    display:block;
+    color:#aaaaaa;
+    font-size:13px;
+    margin-bottom:5px;
+
+}
+
+.akatsuki-data strong{
+
+    display:block;
+    color:white;
+    font-size:15px;
+    font-weight:600;
+
+}
+
+.image-container{
+
+    width:250px;
+    height:290px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+
+}
+
+.image-container img{
+
+    max-width:100%;
+    max-height:100%;
+    object-fit:contain;
+
+}
+
+.character-name{
+
+    margin:15px 0 10px;
+    color:#ff8c00;
+    font-size:28px;
+    font-weight:700;
+    text-align:center;
+
+}
+
+.tags-container{
+
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:6px;
+
+}
+
+.nature-tag{
+
+    background:#ff8c00!important;
+    color:black!important;
+    font-size:11px;
+
+}
+
+.character-data{
+
+    margin-top:20px;
+    width:100%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+
+}
+
+.character-data div{
+
+    background:#111;
+    padding:12px;
+    border-radius:10px;
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+
+}
+
+
+
+.character-data span{
+
+    font-size:12px;
+    color:#aaa;
+
+}
+
+
+.character-data strong{
+
+    margin-top:5px;
+
+}
