@@ -1,6 +1,6 @@
 import type { Props } from "@/interfaces/aldeas";
 import "../../styles/Card.css";
-import villageImages from "@/pages/aldeas/images.ts";
+import villageImages from "@/services/images.ts";
 
 
 export default function VillageCard({ village }: Props) {

@@ -1,5 +1,5 @@
 import "../../styles/ClanCard.css";
-import { clanImages } from "@/pages/clans/images.ts";
+import { clanImages } from "@/services/imag.ts";
 import type {ClanCardProps} from "@/interfaces/clans.ts";
 
 

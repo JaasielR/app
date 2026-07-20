@@ -1,6 +1,6 @@
 import "../../styles/bcard.css";
 import { Tag } from "primereact/tag";
-import tailedBeastData from "./data.ts";
+import tailedBeastData from "../../services/data.ts";
 import type { Props } from "@/interfaces/beasts.ts";
 
 
