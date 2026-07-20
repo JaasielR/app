@@ -39,18 +39,6 @@ export default function BasicDemo() {
                 ],
             ]
         },
-        {
-            label: 'ANIME',
-            icon: 'pi pi-calendar-clock',
-            items: [
-                [
-                    {
-                        label: 'Opciones',
-                        items: [{ label: 'Top Animes' }, { label: 'Sugerencias' }]
-                    }
-                ],
-            ]
-        }
     ];
 
     return (
