@@ -13,7 +13,7 @@ export default defineConfig({
     },
   },
   plugins: [
-    [tsconfigPaths()],
+    tsconfigPaths(),
     tailwindcss(),
     react(),
     babel({ presets: [reactCompilerPreset()] })
