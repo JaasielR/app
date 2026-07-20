@@ -1,26 +1,9 @@
-import "./bcard.css";
+import "../../styles/bcard.css";
 import { Tag } from "primereact/tag";
 import tailedBeastData from "./data.ts";
+import type { Props } from "@/interfaces/beasts.ts";
 
-interface Beast {
 
-    id: number;
-    name: string;
-    images: string[];
-    natureType?: string[];
-    personal?: {
-
-        affiliation?: string | string[];
-
-    };
-
-}
-
-interface Props {
-
-    beast: Beast;
-
-}
 
 export default function TailedBeastCard({ beast }: Props) {
 

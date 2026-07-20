@@ -1,9 +1,8 @@
-import './data.css'
+import '../../styles/data.css'
 import { Tag } from "primereact/tag";
+import type {CharacterCardProps} from "@/interfaces/personajes.ts";
 
-interface CharacterCardProps {
-    character:any;
-}
+
 
 export default function CharacterCard({character}:CharacterCardProps){
 

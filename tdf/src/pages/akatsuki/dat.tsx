@@ -1,47 +1,7 @@
-import './dat.css'
+import type { Props } from "@/interfaces/akatsuki";
+import '../../styles/dat.css'
 import { Tag } from "primereact/tag";
 
-interface AkatsukiMember {
-
-    id:number;
-    name:string;
-    images?:string[];
-    natureType?:string[];
-
-    personal?:{
-
-        sex?:string;
-        affiliation?:string;
-        occupation?:string | string[];
-        classification?:string[];
-
-        age?:{
-
-            ["Part I"]?:string;
-            ["Part II"]?:string;
-
-        };
-
-    };
-
-    rank?:{
-
-        ninjaRank?:{
-
-            ["Part I"]?:string;
-            Gaiden?:string;
-
-        };
-
-    };
-
-}
-
-interface Props{
-
-    member:AkatsukiMember;
-
-}
 
 export default function AkatsukiCard({member}:Props){
 

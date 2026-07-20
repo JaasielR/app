@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import './personajes.css'
+import '../../styles/personajes.css'
 import type {Character} from "@/interfaces/personajes";
 import { getCollection } from "@/services/apiService";
 import CharacterCard from "@/pages/characters/data.tsx";

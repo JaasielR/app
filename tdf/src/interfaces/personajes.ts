@@ -17,3 +17,7 @@ export interface Character {
 
     natureType?: string[];
 }
+
+export interface CharacterCardProps {
+    character:any;
+}

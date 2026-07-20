@@ -1,19 +1,7 @@
-import "./Card.css";
+import type { Props } from "@/interfaces/aldeas";
+import "../../styles/Card.css";
 import villageImages from "@/pages/aldeas/images.ts";
 
-interface Village {
-
-    id: number;
-    name: string;
-    characters: number[];
-
-}
-
-interface Props {
-
-    village: Village;
-
-}
 
 export default function VillageCard({ village }: Props) {
 

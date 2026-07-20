@@ -1,12 +1,7 @@
-import "./ClanCard.css";
+import "../../styles/ClanCard.css";
 import { clanImages } from "@/pages/clans/images.ts";
+import type {ClanCardProps} from "@/interfaces/clans.ts";
 
-
-interface ClanCardProps{
-
-    clan:any;
-
-}
 
 export default function ClanCard({clan}:ClanCardProps){
 

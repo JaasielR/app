@@ -1,7 +1,7 @@
 import ClanCard from "@/pages/clans/ClanCard";
 import { getCollection } from "@/services/apiService";
 import {useEffect, useState} from "react";
-import'./clans.css'
+import'../../styles/clans.css'
 
 export default function Clans() {
 

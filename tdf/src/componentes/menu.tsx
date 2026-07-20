@@ -1,4 +1,4 @@
-import './menu.css'
+import '../styles/menu.css'
 import { MegaMenu } from 'primereact/megamenu';
 import type {MenuItem} from 'primereact/menuitem';
 import {useLocation, useNavigate} from "react-router-dom";

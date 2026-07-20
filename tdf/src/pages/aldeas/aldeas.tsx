@@ -1,15 +1,10 @@
 import { useEffect, useState } from "react";
 import { getCollection } from "@/services/apiService";
 import VillageCard from "@/pages/aldeas/Card";
-import "./aldeas.css";
+import "../../styles/aldeas.css";
+import type {Village} from "@/interfaces/aldeas.ts";
 
-interface Village {
 
-    id:number;
-    name:string;
-    characters:number[];
-
-}
 
 export default function Villas(){
 

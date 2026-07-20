@@ -1,21 +1,8 @@
 import { useEffect, useState } from "react";
 import { getCollection } from "@/services/apiService";
 import TailedBeastCard from "./bcard";
-import "./beasts.css";
-
-interface Beast {
-
-    id: number;
-    name: string;
-    images: string[];
-    natureType?: string[];
-    personal?: {
-
-        affiliation?: string | string[];
-
-    };
-
-}
+import "../../styles/beasts.css";
+import type {Beast} from "@/interfaces/beasts.ts";
 
 export default function TailedBeasts() {
 

@@ -1,30 +1,8 @@
 import { useEffect, useState } from "react";
-import './akatsuki.css'
+import '../../styles/akatsuki.css'
 import { getCollection } from "@/services/apiService";
 import AkatsukiCard from "@/pages/akatsuki/dat.tsx";
-
-interface AkatsukiMember {
-    id: number;
-    name: string;
-    images?: string[];
-    natureType?: string[];
-    personal?: {
-        sex?: string;
-        age?: {
-            ["Part I"]?: string;
-            ["Part II"]?: string;
-        };
-        affiliation?: string;
-        occupation?: string | string[];
-        classification?: string[];
-    };
-    rank?: {
-        ninjaRank?: {
-            ["Part I"]?: string;
-            Gaiden?: string;
-        };
-    };
-}
+import type {AkatsukiMember} from "@/interfaces/akatsuki.ts";
 
 export default function Akatsuki() {
 

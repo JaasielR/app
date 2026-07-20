@@ -1,4 +1,4 @@
-import './inicio.css'
+import '../../styles/inicio.css'
 import React from "react";
 import {Button} from "primereact/button";
 import Home from '@/pages/home/home.tsx'
