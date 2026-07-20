@@ -10,12 +10,12 @@ export default function BasicDemo() {
 
     const irAInicio = () => {
         if (location.pathname === "/") {
-            // Ya estás en Inicio, solo mueve el scroll
+
             document.getElementById("inicio")?.scrollIntoView({
                 behavior: "smooth"
             });
         } else {
-            // Vienes de otra ruta
+            //
             navigate("/", { state: { scrollTo: "inicio" } });
         }
     };

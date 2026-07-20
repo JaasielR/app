@@ -8,6 +8,7 @@ import Akatsuki from "@/pages/akatsuki/akatsuki.tsx";
 import Villas from "@/pages/aldeas/aldeas.tsx";
 import TailedBeasts from "@/pages/bestias/beasts.tsx";
 
+
 function App() {
     return (
         <>

@@ -14,13 +14,20 @@ const Inicio: React.FC = () => {
                 <h1>
                     ¡DATTEBAYO!
                 </h1>
-                <a href="#home">
-                <Button label="Explorar" />
-                </a>
+
+                    <Button
+                        label="Explorar"
+                        onClick={() => {
+                            document
+                                .getElementById("pagina2")
+                                ?.scrollIntoView({ behavior: "smooth" });
+                        }}
+                    />
+
                 </div>
             </div>
 
-            <section id="home">
+            <section id="pagina2">
                 <div data-aos="fade-down">
                     <Home/>
                 </div>
