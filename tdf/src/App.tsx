@@ -1,6 +1,6 @@
 import Inicio from "@/pages/inicio/inicio.tsx";
 import BasicDemo from "@/componentes/menu.tsx";
-import Title from "@/pages/home/title.tsx";
+import Title from "@/componentes/title.tsx";
 import { Routes, Route } from "react-router-dom";
 import Personajes from "@/pages/characters/personajes.tsx";
 import Clans from "@/pages/clans/clans.tsx";

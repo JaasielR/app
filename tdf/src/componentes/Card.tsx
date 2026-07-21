@@ -1,5 +1,5 @@
-import type { Props } from "@/interfaces/aldeas";
-import "../../styles/Card.css";
+import type { Props } from "@/interfaces/aldeas.ts";
+import "../styles/Card.css";
 import villageImages from "@/services/images.ts";
 
 

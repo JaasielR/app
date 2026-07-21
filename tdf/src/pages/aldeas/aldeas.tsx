@@ -1,36 +1,29 @@
-import { useEffect, useState } from "react";
-import { getCollection } from "@/services/apiService";
-import VillageCard from "@/pages/aldeas/Card";
+import { useEffect} from "react";
+import VillageCard from "@/componentes/Card.tsx";
 import "../../styles/aldeas.css";
 import type {Village} from "@/interfaces/aldeas.ts";
+import {useAppDispatch, useAppSelector} from "@/hooks/reduxhooks.ts";
+import {fetchCollection} from "@/api/apiSlice.ts";
 
 
 
 export default function Villas(){
 
-    const [villages,setVillages]=useState<Village[]>([]);
+    const dispatch = useAppDispatch();
+    const villages = useAppSelector(
+        state =>
+            (state.api.collections["villages"] as Village[]) ?? []
+    );
 
-    useEffect(()=>{
+    useEffect(() => {
 
-        async function loadVillages(){
+        if (!villages.length) {
 
-            const data=await getCollection("villages");
-
-            const uniqueVillages=data.villages.filter(
-                (village:Village,index:number,self:Village[])=>
-
-                    index===self.findIndex(
-                        v=>v.name===village.name
-                    )
-            );
-
-            setVillages(uniqueVillages);
+            dispatch(fetchCollection("villages"));
 
         }
 
-        loadVillages();
-
-    },[]);
+    }, [dispatch, villages.length]);
 
     return(
 

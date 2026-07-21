@@ -1,26 +1,27 @@
-import { useEffect, useState } from "react";
+import { useEffect} from "react";
 import '../../styles/akatsuki.css'
-import { getCollection } from "@/services/apiService";
-import AkatsukiCard from "@/pages/akatsuki/dat.tsx";
+import AkatsukiCard from "@/componentes/dat.tsx";
 import type {AkatsukiMember} from "@/interfaces/akatsuki.ts";
+import {useAppDispatch, useAppSelector} from "@/hooks/reduxhooks.ts";
+import {fetchCollection} from "@/api/apiSlice.ts";
 
 export default function Akatsuki() {
 
-    const [members, setMembers] = useState<AkatsukiMember[]>([]);
+    const dispatch = useAppDispatch();
+    const members = useAppSelector(
+        state =>
+            (state.api.collections["akatsuki"] as AkatsukiMember[]) ?? []
+    );
 
     useEffect(() => {
 
-        async function loadAkatsuki() {
+        if (!members.length) {
 
-            const data = await getCollection("akatsuki");
-
-            setMembers(data.akatsuki);
+            dispatch(fetchCollection("akatsuki"));
 
         }
 
-        loadAkatsuki();
-
-    }, []);
+    }, [dispatch, members.length]);
 
     return (
 

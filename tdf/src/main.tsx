@@ -1,14 +1,15 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
+import { BrowserRouter } from 'react-router-dom';
+import { Provider } from "react-redux";
+import { store } from "@/app/store";
 import App from './App.tsx'
+import './index.css'
 import 'primereact/resources/themes/lara-light-blue/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
-import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { BrowserRouter } from 'react-router-dom';
-
+import AOS from 'aos';
 
 
 AOS.init({
@@ -17,9 +18,13 @@ AOS.init({
 });
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-      <BrowserRouter basename="/app">
-          <App />
-      </BrowserRouter>
-  </StrictMode>,
+
+    <StrictMode>
+        <Provider store={store}>
+            <BrowserRouter basename="/app">
+                <App />
+            </BrowserRouter>
+        </Provider>
+    </StrictMode>
+
 )

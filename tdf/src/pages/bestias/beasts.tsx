@@ -1,23 +1,27 @@
-import { useEffect, useState } from "react";
-import { getCollection } from "@/services/apiService";
-import TailedBeastCard from "./bcard";
+import { useEffect } from "react";
+import TailedBeastCard from "../../componentes/bcard.tsx";
 import "../../styles/beasts.css";
 import type {Beast} from "@/interfaces/beasts.ts";
+import {useAppDispatch, useAppSelector} from "@/hooks/reduxhooks.ts";
+import {fetchCollection} from "@/api/apiSlice.ts";
 
 export default function TailedBeasts() {
 
-    const [beasts, setBeasts] = useState<Beast[]>([]);
+    const dispatch = useAppDispatch();
+    const beasts = useAppSelector(
+        state =>
+            (state.api.collections["tailed-beasts"] as Beast[]) ?? []
+    );
 
     useEffect(() => {
 
-        getCollection("tailed-beasts")
-            .then(data => {
+        if (!beasts.length) {
 
-                setBeasts(data["tailed-beasts"]);
+            dispatch(fetchCollection("tailed-beasts"));
 
-            });
+        }
 
-    }, []);
+    }, [dispatch, beasts.length]);
 
     return (
 

@@ -1,5 +1,5 @@
-import type { Props } from "@/interfaces/akatsuki";
-import '../../styles/dat.css'
+import type { Props } from "@/interfaces/akatsuki.ts";
+import '../styles/dat.css'
 import { Tag } from "primereact/tag";
 
 

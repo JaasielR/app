@@ -1,15 +1,8 @@
-import { API_URL, CLIENT_ID } from "./api";
+import api from "./api";
 
-export async function getCollection(collection: string) {
-    const response = await fetch(`${API_URL}/${collection}`, {
-        headers: {
-            "x-client-id": CLIENT_ID
-        }
-    });
+export async function getCollection<T>(collection: string): Promise<T> {
 
-    if (!response.ok) {
-        throw new Error("Error al consultar la API");
-    }
+    const response = await api.get<T>(`/${collection}`);
+    return response.data;
 
-    return response.json();
 }

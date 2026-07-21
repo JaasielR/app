@@ -19,5 +19,6 @@ export interface Character {
 }
 
 export interface CharacterCardProps {
-    character:any;
+    character: any;
+
 }

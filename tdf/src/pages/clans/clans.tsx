@@ -1,34 +1,26 @@
-import ClanCard from "@/pages/clans/ClanCard";
-import { getCollection } from "@/services/apiService";
-import {useEffect, useState} from "react";
+import ClanCard from "@/componentes/ClanCard.tsx";
+import {useEffect} from "react";
 import'../../styles/clans.css'
+import {useAppDispatch, useAppSelector} from "@/hooks/reduxhooks.ts";
+import {fetchCollection} from "@/api/apiSlice.ts";
 
 export default function Clans() {
 
-    const [clans,setClans] = useState<any[]>([]);
+    const dispatch = useAppDispatch();
+    const clans = useAppSelector(
+        state =>
+            (state.api.collections["clans"] as any[]) ?? []
+    );
 
-    useEffect(()=>{
+    useEffect(() => {
 
-        async function load(){
+        if (!clans.length) {
 
-            const data =
-                await getCollection("clans");
-
-            const uniqueClans = data.clans.filter(
-                (clan:any, index:number, self:any[]) =>
-                    index === self.findIndex(
-                        (c:any) => c.name === clan.name
-                    )
-            );
-
-            setClans(uniqueClans);
+            dispatch(fetchCollection("clans"));
 
         }
 
-        load();
-
-
-    },[]);
+    }, [dispatch, clans.length]);
 
     return(
 

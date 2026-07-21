@@ -1,34 +1,27 @@
-import { useEffect, useState } from "react";
+import { useEffect} from "react";
 import '../../styles/personajes.css'
 import type {Character} from "@/interfaces/personajes";
-import { getCollection } from "@/services/apiService";
-import CharacterCard from "@/pages/characters/data.tsx";
+import CharacterCard from "@/componentes/data.tsx";
+import { useAppDispatch, useAppSelector } from "@/hooks/reduxhooks";
+import { fetchCollection } from "@/api/apiSlice";
 
 export default function Personajes() {
 
-    const [characters, setCharacters] = useState<Character[]>([]);
+    const dispatch = useAppDispatch();
+    const characters = useAppSelector(
+        state =>
+            (state.api.collections["characters"] as Character[]) ?? []
+    );
 
     useEffect(() => {
 
-        async function cargar() {
+        if (!characters.length) {
 
-            try {
-
-                const data = await getCollection("characters");
-
-                setCharacters(data.characters);
-
-            } catch (error) {
-
-                console.error(error);
-
-            }
+            dispatch(fetchCollection("characters"));
 
         }
 
-        cargar();
-
-    }, []);
+    }, [dispatch, characters.length]);
 
     return (
         <div className="characters-grid">

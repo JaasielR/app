@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../styles/home.css'
 import AutoPlayDemo from "@/componentes/panel.tsx";
-import BusquedaMenu from "@/pages/home/table.tsx";
+import BusquedaMenu from "@/componentes/table.tsx";
 
 const Home: React.FC = () => {
     return (
